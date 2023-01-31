@@ -1,0 +1,64 @@
+/* Board */
+
+.board {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.column {
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cell */
+
+.cell {
+    background-color: #aaaaaa;
+    border: 1px solid #888888;
+    width: 20px;
+    height: 20px;
+}
+
+.cell--alive {
+    background-color: #333333;
+}
+
+.cell--dead {
+    background-color: white;
+}
+
+/* Draggable Window */
+
+.draggable-window {
+    width: 200px;
+    height: 120px;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.draggable-window--header {
+    width: 200px;
+    height: 20px;
+    background: #aaaaaa;
+}
+
+.draggable-window--content {
+    width: 200px;
+    height: 100px;
+    background: #eeeeee;
+}
+
+.draggable-window--content--button {
+    width: 50%;
+}
+
