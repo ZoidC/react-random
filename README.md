@@ -1,4 +1,6 @@
-# React Random Test
+## NextJS Random
 
 - npm i
-- npm start
+- npm run dev
+
+

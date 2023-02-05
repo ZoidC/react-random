@@ -1,34 +1,24 @@
-/* Board */
-
-.board {
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
+:root {
+    --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+        'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+        'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 }
 
-.column {
-    width: 20px;
-    display: flex;
-    flex-direction: column;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-/* Cell */
-
-.cell {
-    background-color: #aaaaaa;
-    border: 1px solid #888888;
-    width: 20px;
-    height: 20px;
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
-.cell--alive {
-    background-color: #333333;
-}
-
-.cell--dead {
-    background-color: white;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* Draggable Window */
@@ -61,4 +51,3 @@
 .draggable-window--content--button {
     width: 50%;
 }
-

@@ -3,18 +3,18 @@ import Position from "./interfaces/Position";
 
 const isInsideBoard = (board: number[][], pos: Position): boolean => {
     return pos.x >= 0 && pos.x < board.length && pos.y >= 0 && pos.y < board[pos.x].length;
-}
+};
 
-export const initBoard = (windowHeight: number, windowWidth: number, cellSize: number, ratioAlive: number): number[][] => {
+export const initBoard = (width: number, height: number, cellSize: number, ratioAlive: number): number[][] => {
     const initialBoard: number[][] = [];
-    for (let x = 0; x < windowWidth/cellSize; x++) {
+    for (let x = 0; x < width / cellSize; x++) {
         initialBoard.push([]);
-        for (let y = 0; y < windowHeight/cellSize; y++) {
+        for (let y = 0; y < height / cellSize; y++) {
             initialBoard[x].push(Math.random() > ratioAlive ? CELL_DEAD : CELL_ALIVE);
         }
     }
     return initialBoard;
-}
+};
 
 export const updateBoard = (currentBoard: number[][], pos: Position): number[][] => {
     const newBoard = [...currentBoard];
@@ -22,7 +22,7 @@ export const updateBoard = (currentBoard: number[][], pos: Position): number[][]
         newBoard[pos.x][pos.y] = newBoard[pos.x][pos.y] ? CELL_DEAD : CELL_ALIVE;
     }
     return newBoard;
-}
+};
 
 export const inverseBoard = (currentBoard: number[][]): number[][] => {
     const newBoard = [...currentBoard];
@@ -32,7 +32,7 @@ export const inverseBoard = (currentBoard: number[][]): number[][] => {
         }
     }
     return newBoard;
-}
+};
 
 export const gameOfLife = (currentBoard: number[][]): number[][] => {
     const newBoard = [...currentBoard];
@@ -57,4 +57,4 @@ export const gameOfLife = (currentBoard: number[][]): number[][] => {
         }
     }
     return newBoard;
-}
+};

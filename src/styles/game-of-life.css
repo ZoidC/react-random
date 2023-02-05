@@ -1,0 +1,39 @@
+/* Board */
+
+@media (min-width: 500px) {
+    .board {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.board {
+    background-color: black;
+    width: 700px;
+    height: 700px;
+    overflow: hidden;
+    display: flex;
+}
+
+.column {
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cell */
+
+.cell {
+    background-color: #aaaaaa;
+    border: 1px solid #888888;
+    width: 20px;
+    height: 20px;
+}
+
+.cell--alive {
+    background-color: #333333;
+}
+
+.cell--dead {
+    background-color: white;
+}
