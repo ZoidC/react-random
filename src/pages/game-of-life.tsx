@@ -1,10 +1,12 @@
-import Header from '@/components/Header';
 import GameOfLifeBoard from '@/components/game-of-life/GameOfLifeBoard';
+import Head from 'next/head';
 
 export default function GameOfLife() {
     return (
         <>
-            <Header title="Game of Life"></Header>
+            <Head>
+                <title>Game of Life</title>
+            </Head>
             <GameOfLifeBoard />
         </>
     );

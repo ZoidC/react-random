@@ -1,9 +1,11 @@
-import Header from '@/components/Header';
+import Head from 'next/head';
 
 export default function Home() {
     return (
         <>
-            <Header title="Random NextJS"></Header>
+            <Head>
+                <title>Home</title>
+            </Head>
             <main>
                 <h1>Home</h1>
             </main>
